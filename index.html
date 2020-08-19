@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CEDUK Escuela</title>
+        <style>
+            body{background-color: dimgrey;}
+            #ResultadoAprobado{color:greenyellow;}
+            #ResultadoReprobado{color:red;}
+            #Alumno{color:white;}
+        </style>
+        <script>
+            /* Comentarios  */
+            // comentarios
+            /* 
+                var Area, Base, Altura;
+                Base = 10.3;
+                Altura = 5;
+                Area = (Base * Altura)/2;
+                alert('El Area es: ' + Area);
+
+                var Nombre, Apellido;
+                Nombre = 'Joaquin ';
+                Apellido = 'Garcia';
+                alert('El Nombre es: ' + Nombre + Apellido);
+
+                var Exponente;
+                Exponente = 4**2;
+                alert(Exponente);
+
+                var Modulo;
+                Modulo = 10%3;
+                alert(Modulo);
+            */
+
+            function Suma(valor1, valor2)
+            {
+                valor1 = valor1 * 100 / 2;
+                valor2 = valor2 -5 * 3.1416;
+                return valor1 + valor2;
+            }
+
+        </script>
+    </head>
+    <body>
+        <center><h1>Bienvenido</h1></center>
+        <hr>
+        <p id="ResultadoAprobado"></p>
+        <p id="ResultadoReprobado"></p>
+
+        <p id="Alumno"></p>
+        <p id="Lista"></p>
+        <p id="Lista2"></p>
+
+        <script>
+            var Cal1, Cal2, Cal3;
+            Cal1 = 0;
+            Cal2 = 100;
+            Cal3 = 100;
+
+            Promedio = (Cal1 + Cal2 + Cal3)/3;
+            //alert(Promedio);
+            /// Estructura Condicional 
+            if (Promedio >= 70)
+            {
+                //alert('Aprobado');
+                document.getElementById("ResultadoAprobado").innerHTML = "Aprobado";
+            }
+            else
+            {
+                //alert('Reprobado');
+                document.getElementById("ResultadoReprobado").innerHTML = "Reprobado";
+            }
+
+
+            /// Objetos
+            var Alumno = {Nombre:"David", Apellido:"Rodriguez", Materia:"Matematicas"};
+            Alumno.Nombre = "Leslie";
+            
+            document.getElementById("Alumno").innerHTML = Alumno.Nombre;
+
+            //alert(Alumno.Nombre.length);
+            //alert(Promedio.toString())
+            
+            /// Arrays
+            var Estudiantes = ["JC", "David", "Leslie", "Guillermo", "Joaquin", "Fco", "Jorge", "Luis"];
+            
+            Estudiantes.push("Tigres");        
+            //var lista = document.getElementById("Lista");
+            //lista.innerHTML = Estudiantes[2];
+
+            document.getElementById("Lista").innerHTML = Estudiantes;
+            Estudiantes.pop();
+            document.getElementById("Lista2").innerHTML = Estudiantes.sort();
+
+            var ResultadoSuma;
+            ResultadoSuma = Suma(10, 5);
+            alert(ResultadoSuma);
+            alert(Suma(12, 20));
+            alert(Suma(18, 6));
+            alert(Suma(12, 22));
+            alert(Suma(10, 200));
+            alert(Suma(120, 200));
+        
+        </script>
+    </body>
+
+</html>
